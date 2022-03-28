@@ -50,7 +50,7 @@ const Navbar = () => {
       </div>
 
       <div className='navbar__product-cart'>
-        <img src={cart} alt="product-cart" />
+        <img id='navbar__product-cart-cart' src={cart} alt="product-cart" />
         <img id='navbar__product-cart-avatar' src={avatar} alt="loggin" />
       </div>
 
