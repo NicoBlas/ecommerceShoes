@@ -9,7 +9,7 @@
 
 
 :root{
-        --font-family: "Kumbh Sans";
+        --font-family:'Public Sans', sans-serif;
         --color-p:hsl(219, 9%, 45%);
 }
 
