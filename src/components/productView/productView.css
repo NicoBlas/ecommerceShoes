@@ -173,3 +173,10 @@
     margin-right: 1rem;
 
 }
+
+.productView__info-container-cart_number button{
+    outline: none;
+    border-style: none;
+    background: none;
+    cursor: pointer;
+}

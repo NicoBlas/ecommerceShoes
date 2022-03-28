@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import "./productView.css"
 import image1 from "../../assets/image-product-1.jpg"
 import image2 from "../../assets/image-product-2.jpg"
@@ -17,7 +17,17 @@ import whiteCart from "../../assets/icon-cart copy.svg"
 const ProductView = () => {
 
   let price = "125.00"
+  const [numberProductToOrder, setNumberProductToOrder] = useState(0)
 
+  const substractOne = () =>{
+    if(numberProductToOrder > 0){
+      return setNumberProductToOrder(numberProductToOrder-1)
+    }
+    return 0
+  }
+  const addOne = () =>{
+    return setNumberProductToOrder(numberProductToOrder+1)
+  }
   return (
     <div className='productView'>
       <div className='porductView__images-container'>
@@ -69,9 +79,9 @@ const ProductView = () => {
 
         <div className='productView__info-container-cart'>
           <div className='productView__info-container-cart_number'>
-            <img src={minus} alt="substract" />
-            <p>{0}</p>
-            <img src={plus} alt="add" />
+            <button type='button' onClick={substractOne}><img src={minus} alt="substract" /></button>
+            <p>{numberProductToOrder}</p>
+            <button type='button' onClick={addOne}><img src={plus} alt="add" /></button>
           </div>
 
           <div className='productView__info-container-cart_addToCart'>
