@@ -2,4 +2,4 @@ import { createContext } from "react";
 
 
 
-export const ProductsContext = createContext(0)
+export const ProductsContext = createContext(null)
