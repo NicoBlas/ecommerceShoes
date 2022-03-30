@@ -24,13 +24,14 @@
     display: none;
 }
 
-.porductView__images-container_arrowLeft{
+.porductView__images-container_arrowLeft button{
     height: 42px;
     width: 42px;
     border-radius: 50%;
     background: #fff;
     display: flex;
-
+    border: none;
+    outline: none;
     position: absolute;
     top: 42%;
     left: 15px;
@@ -41,18 +42,17 @@
     width: 30%;
     height: 30%;
 }
-.porductView__images-container_arrowRight{
+.porductView__images-container_arrowRight button{
     height: 42px;
     width: 42px;
     border-radius: 50%;
     background: #fff;
     display: flex;
-
     position: absolute;
     top:42%;
     right: 15px;
-
-    
+    border: none;
+    outline: none;
 }
 
 .porductView__images-container_arrowRight img{
@@ -180,3 +180,4 @@
     background: none;
     cursor: pointer;
 }
+

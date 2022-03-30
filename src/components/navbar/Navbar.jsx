@@ -4,6 +4,7 @@ import "./navbar.css"
 import logo from "../../assets/logo.svg"
 import cart from "../../assets/icon-cart.svg"
 import avatar from "../../assets/image-avatar.png"
+import ProductCart from '../productCart/ProductCart'
 
 const Menu = () =>{
   return (
@@ -50,7 +51,7 @@ const Navbar = () => {
       </div>
 
       <div className='navbar__product-cart'>
-        <img id='navbar__product-cart-cart' src={cart} alt="product-cart" />
+        <ProductCart />
         <img id='navbar__product-cart-avatar' src={avatar} alt="loggin" />
       </div>
 

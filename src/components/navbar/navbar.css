@@ -29,7 +29,8 @@
 
 .navbar__product-cart{
     position: absolute;
-    right: 25px;   
+    right: 25px;
+    display: flex;   
 }
 
 #navbar__product-cart-avatar{
@@ -42,9 +43,6 @@
     height: 24px;
 }   
 
-.navbar__menu-container{
-    position: absolute;
-}
 
 .navbar__menu-container {
     display: flex;
