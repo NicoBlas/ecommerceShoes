@@ -16,7 +16,8 @@ const ProductCart = () => {
     return productsInCartActive.shift()
   }
   const pushProduct = () =>{
-    return productsInCartActive.push(productsInCart)
+    return productsInCart!=0?productsInCartActive.push(productsInCart):null
+  
   }
 
   useEffect(()=>{
@@ -29,13 +30,14 @@ const ProductCart = () => {
 
   return (
     <div className='productCart'>
-      <button className='productCartButton' type='button'><img id='productCart__icon' onClick={() => setToggleMenu(!toggleMenu)} src={cart} alt="product-cart" /></button>
+      <button className='productCartButton' type='button'><div className={productsInCartActive.length>0?"productCartDIV":"productCartDIV productCartHideDIV"}>{productsInCartActive.length}</div><img id='productCart__icon' onClick={() => setToggleMenu(!toggleMenu)} src={cart} alt="product-cart" /></button>
       {toggleMenu && (
         <div className='productCart__open'>
+          <p id="productCart__open-p">Cart</p>
+          <div className='productCart__openDIV'/>
           <div className='productCart__open-links'>
             <div className='productCart__open-links_products'>
               <ul className='productCart__ul'>
-                
                 {productsInCartActive.length > 0 &&
                   
                   productsInCartActive.map((elem,i)=>{
