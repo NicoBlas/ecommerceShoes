@@ -146,6 +146,7 @@
 
 .productView__info-container-cart_addToCart{
     width: 100%;
+    padding-bottom: 2rem;
 }
 
 .productView__info-container-cart_addToCart button{
