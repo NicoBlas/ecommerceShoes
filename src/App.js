@@ -8,10 +8,10 @@ import {ProductsContext} from "./components/ProductsContext"
 
 function App() {
 
-  const [productsInCart, setProductsInCart] = useState(0)
+  const [productsToAdd, setProductsToAdd] = useState(0)
 
   return (
-    <ProductsContext.Provider value={{productsInCart, setProductsInCart}}>
+    <ProductsContext.Provider value={{productsToAdd, setProductsToAdd}}>
       <div className="App">
         <Navbar />
         <ProductView />

@@ -9,14 +9,14 @@ const productsInCartActive = []
 
 const ProductCart = () => {
   const [toggleMenu, setToggleMenu] = useState(false)
-  const {productsInCart, setProductsInCart} = useContext(ProductsContext)
+  const {productsToAdd, setProductsToAdd} = useContext(ProductsContext)
   const [value,setValue] = useState(false)
 
   const deleteProduct = () =>{
     return productsInCartActive.shift()
   }
   const pushProduct = () =>{
-    return productsInCart!=0?productsInCartActive.push(productsInCart):null
+    return productsToAdd!=0?productsInCartActive.push(productsToAdd):null
   
   }
 
@@ -26,7 +26,7 @@ const ProductCart = () => {
 
   useEffect(()=>{
     pushProduct()
-  },[productsInCart])
+  },[productsToAdd])
 
   return (
     <div className='productCart'>

@@ -20,10 +20,10 @@ const ProductView = () => {
   
   const [numberProductToOrder, setNumberProductToOrder] = useState(1)
   const [imageShowed, setImageShowed] = useState(0)
-  const {productsInCart, setProductsInCart} = useContext(ProductsContext)
+  const {productsToAdd, setProductsToAdd} = useContext(ProductsContext)
 
   const addProductToCart = () =>{
-    return setProductsInCart(numberProductToOrder)
+    return setProductsToAdd(numberProductToOrder)
 
   }
 
