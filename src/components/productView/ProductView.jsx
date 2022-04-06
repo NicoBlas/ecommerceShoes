@@ -54,7 +54,7 @@ const ProductView = () => {
     <div className='productView'>
       <div className='porductView__images-container'>
         <div className='porductView__images-container_bigImage'>
-          <img src={images[imageShowed]} alt="imageBig" />
+          <img id='bigImageId' src={images[imageShowed]} alt="imageBig" />
 
           <div className='porductView__images-container_arrowLeft'>
             <button type='button' onClick={changeImageMinus}><img src={arrowLeft} alt="arrowLeft" /></button>       
@@ -70,19 +70,19 @@ const ProductView = () => {
 
         <div className='porductView__images-container_smallImages'>
           <div className='porductView__images-container_smallImages-image'>
-            <img src={image1} alt="image1" />
+            <img src={image1} alt="image1" onClick={() => setImageShowed(0)} />
           </div>
 
           <div className='porductView__images-container_smallImages-image'>
-            <img src={image2} alt="image2" />
+            <img src={image2} alt="image2" onClick={() => setImageShowed(1)} />
+          </div>
+          
+          <div className='porductView__images-container_smallImages-image'>
+            <img src={image3} alt="image3" onClick={() => setImageShowed(2)} />
           </div>
 
           <div className='porductView__images-container_smallImages-image'>
-            <img src={image3} alt="image3" />
-          </div>
-
-          <div className='porductView__images-container_smallImages-image'>
-            <img src={image4} alt="image4" />
+            <img src={image4} alt="image4" onClick={() => setImageShowed(3)} />
           </div>
 
         </div>

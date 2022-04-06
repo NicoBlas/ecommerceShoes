@@ -41,6 +41,7 @@
     margin: auto;
     width: 30%;
     height: 30%;
+    cursor: pointer;
 }
 .porductView__images-container_arrowRight button{
     height: 42px;
@@ -59,6 +60,7 @@
     margin: auto;
     width: 30%;
     height: 30%;
+    cursor: pointer;
 }
 
 .porductView__info-container{
@@ -182,3 +184,86 @@
     cursor: pointer;
 }
 
+
+@media (min-width: 900px){
+    .productView{
+        display: flex;
+        flex-direction: row;
+        margin-top: 6rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .porductView__images-container{
+        margin-right: 2rem;
+        width: 28%;
+    }
+
+    .porductView__images-container_bigImage{
+        width: 100%;
+        height: 100%;
+    }
+    #bigImageId{
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+    }
+    .porductView__info-container{
+        width: 30%;
+        margin-left: 2rem;
+    }
+    .porductView__info-container h2{
+        font-weight: bold;
+        font-size: 45px;
+    }
+    .porductView__info-container p{
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .porductView__info-container_price{
+        margin: 2rem 0;
+        justify-content:start;
+    }
+    .productView__info-container-cart{
+        display: flex;
+        flex-direction: row;
+        align-items:baseline;
+    }
+    .productView__info-container-cart_number{
+        width: 40%;
+        height: 75px;
+        margin-right: 2rem;
+    }
+    .productView__info-container-cart_addToCart button{
+        height: 70px;
+    }
+    #p-discount{
+        margin-left: 1rem;
+    }
+
+    .porductView__images-container_smallImages{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+    }
+    .porductView__images-container_smallImages-image{
+        width: 100px;
+        height: 100px;
+        border-radius: 15px;
+    }
+    
+    .porductView__images-container_smallImages-image:hover{
+        border: 2px solid  hsl(26, 100%, 55%)
+    }
+    .porductView__images-container_smallImages-image img{
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+    }
+
+    .porductView__images-container_smallImages-image img:hover{
+        cursor: pointer;
+        opacity: 0.4
+    }
+}
