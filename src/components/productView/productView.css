@@ -130,6 +130,14 @@
     cursor: pointer;
 }
 
+.productView__expandImage-opacity{
+    display: none;
+    
+}
+.productViwe__expandImage-container{
+    display: none;
+}
+
 
 @media (min-width: 900px){
     .productView{
@@ -199,5 +207,12 @@
         height: 560px;
         z-index: 100;
         top: 15%;
+    }
+    .productView__expandImage-opacity{
+        display: block;
+        
+    }
+    .productViwe__expandImage-container{
+        display: block;
     }
 }
