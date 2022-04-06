@@ -14,12 +14,16 @@ import plus from "../../assets/icon-plus.svg"
 import minus from "../../assets/icon-minus.svg"
 import whiteCart from "../../assets/icon-cart copy.svg"
 import { ProductsContext } from '../ProductsContext'
+import ProductsImages from '../productImages/ProductsImages'
+
+
 const ProductView = () => {
-  const images = [image1,image2,image3,image4]
+  
   let price = "125.00"
   
   const [numberProductToOrder, setNumberProductToOrder] = useState(1)
-  const [imageShowed, setImageShowed] = useState(0)
+  
+  const [expandImage, setExpandImage] = useState(false)
   const {productsToAdd, setProductsToAdd} = useContext(ProductsContext)
 
   const addProductToCart = () =>{
@@ -27,19 +31,7 @@ const ProductView = () => {
 
   }
 
-  const changeImagePlus = () =>{
-    if(imageShowed < 3){
-      return setImageShowed(imageShowed+1)
-    }
-    return 3
-  }
-
-  const changeImageMinus = () =>{
-    if(imageShowed > 0){
-      return setImageShowed(imageShowed-1)
-    }
-    return 0
-  }
+  
 
   const substractOne = () =>{
     if(numberProductToOrder > 0){
@@ -53,39 +45,7 @@ const ProductView = () => {
   return (
     <div className='productView'>
       <div className='porductView__images-container'>
-        <div className='porductView__images-container_bigImage'>
-          <img id='bigImageId' src={images[imageShowed]} alt="imageBig" />
-
-          <div className='porductView__images-container_arrowLeft'>
-            <button type='button' onClick={changeImageMinus}><img src={arrowLeft} alt="arrowLeft" /></button>       
-          </div>
-
-          <div className='porductView__images-container_arrowRight'>
-            <button type='button' onClick={changeImagePlus}><img src={arrowRight} alt="arrowRight" /></button>   
-          </div>
-
-        </div>
-        
-        
-
-        <div className='porductView__images-container_smallImages'>
-          <div className='porductView__images-container_smallImages-image'>
-            <img src={image1} alt="image1" onClick={() => setImageShowed(0)} />
-          </div>
-
-          <div className='porductView__images-container_smallImages-image'>
-            <img src={image2} alt="image2" onClick={() => setImageShowed(1)} />
-          </div>
-          
-          <div className='porductView__images-container_smallImages-image'>
-            <img src={image3} alt="image3" onClick={() => setImageShowed(2)} />
-          </div>
-
-          <div className='porductView__images-container_smallImages-image'>
-            <img src={image4} alt="image4" onClick={() => setImageShowed(3)} />
-          </div>
-
-        </div>
+      <ProductsImages />
       </div>
       
       <div className='porductView__info-container'> 
@@ -122,3 +82,6 @@ const ProductView = () => {
 }
 
 export default ProductView
+
+
+

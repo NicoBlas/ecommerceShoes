@@ -7,61 +7,7 @@
     width: 100%;
 }
 
-.porductView__images-container_bigImage{
-    width: 100%;
-    height: 90vw;
-    position: relative;
-    
-}
 
-.porductView__images-container_bigImage img{
-    width: 100%;
-    height: 100%;
-    
-}
-
-.porductView__images-container_smallImages{
-    display: none;
-}
-
-.porductView__images-container_arrowLeft button{
-    height: 42px;
-    width: 42px;
-    border-radius: 50%;
-    background: #fff;
-    display: flex;
-    border: none;
-    outline: none;
-    position: absolute;
-    top: 42%;
-    left: 15px;
-}
-
-.porductView__images-container_arrowLeft img{
-    margin: auto;
-    width: 30%;
-    height: 30%;
-    cursor: pointer;
-}
-.porductView__images-container_arrowRight button{
-    height: 42px;
-    width: 42px;
-    border-radius: 50%;
-    background: #fff;
-    display: flex;
-    position: absolute;
-    top:42%;
-    right: 15px;
-    border: none;
-    outline: none;
-}
-
-.porductView__images-container_arrowRight img{
-    margin: auto;
-    width: 30%;
-    height: 30%;
-    cursor: pointer;
-}
 
 .porductView__info-container{
     display: flex;
@@ -203,11 +149,7 @@
         width: 100%;
         height: 100%;
     }
-    #bigImageId{
-        width: 100%;
-        height: 100%;
-        border-radius: 20px;
-    }
+   
     .porductView__info-container{
         width: 30%;
         margin-left: 2rem;
@@ -242,28 +184,4 @@
         margin-left: 1rem;
     }
 
-    .porductView__images-container_smallImages{
-        display: flex;
-        justify-content: space-between;
-        margin-top: 2rem;
-    }
-    .porductView__images-container_smallImages-image{
-        width: 100px;
-        height: 100px;
-        border-radius: 15px;
-    }
-    
-    .porductView__images-container_smallImages-image:hover{
-        border: 2px solid  hsl(26, 100%, 55%)
-    }
-    .porductView__images-container_smallImages-image img{
-        width: 100%;
-        height: 100%;
-        border-radius: 12px;
-    }
-
-    .porductView__images-container_smallImages-image img:hover{
-        cursor: pointer;
-        opacity: 0.4
-    }
 }
