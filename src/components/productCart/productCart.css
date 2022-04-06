@@ -138,3 +138,12 @@
 .productCartHideDIV{
     display: none;
 }
+
+@media (min-width: 900px){
+    .productCart__open{
+        width: 400px;
+        right: -20px;
+        border-radius: 20px;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    }
+}
