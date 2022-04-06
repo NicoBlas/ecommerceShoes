@@ -15,7 +15,7 @@ import minus from "../../assets/icon-minus.svg"
 import whiteCart from "../../assets/icon-cart copy.svg"
 import { ProductsContext } from '../ProductsContext'
 import ProductsImages from '../productImages/ProductsImages'
-
+import { ExpandImageContext } from '../ExpandImageContext'
 
 const ProductView = () => {
   
@@ -23,15 +23,13 @@ const ProductView = () => {
   
   const [numberProductToOrder, setNumberProductToOrder] = useState(1)
   
-  const [expandImage, setExpandImage] = useState(false)
+  const {expandImage, setExpandImage} = useContext(ExpandImageContext)
   const {productsToAdd, setProductsToAdd} = useContext(ProductsContext)
-
+  {console.log("Expande Image es: ",expandImage)}
   const addProductToCart = () =>{
     return setProductsToAdd(numberProductToOrder)
 
   }
-
-  
 
   const substractOne = () =>{
     if(numberProductToOrder > 0){
@@ -44,6 +42,17 @@ const ProductView = () => {
   }
   return (
     <div className='productView'>
+
+      {expandImage && (
+        <React.Fragment>
+          <div onClick={()=> setExpandImage(!expandImage)} className='productView__expandImage-opacity' />
+          <div className='productViwe__expandImage-container'>
+            <ProductsImages />
+          </div>
+        </React.Fragment>
+        
+      )}
+
       <div className='porductView__images-container'>
       <ProductsImages />
       </div>

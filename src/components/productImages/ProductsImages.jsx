@@ -1,5 +1,6 @@
-import React,{useState} from 'react'
+import React,{useState,useContext} from 'react'
 import "./productsImages.css"
+import { ExpandImageContext } from '../ExpandImageContext'
 import image1 from "../../assets/image-product-1.jpg"
 import image2 from "../../assets/image-product-2.jpg"
 import image3 from "../../assets/image-product-3.jpg"
@@ -12,6 +13,7 @@ import arrowLeft from "../../assets/icon-previous.svg"
 import arrowRight from "../../assets/icon-next.svg"
 
 const ProductsImages = () => {
+    const {expandImage, setExpandImage} = useContext(ExpandImageContext)
     const images = [image1,image2,image3,image4]
     const [imageShowed, setImageShowed] = useState(0)
     const changeImagePlus = () =>{
@@ -33,7 +35,7 @@ const ProductsImages = () => {
         <React.Fragment>
 
             <div className='productsImages-container_bigImage'>
-                <img id='bigImageId' src={images[imageShowed]} alt="imageBig" />
+                <img onClick={()=> setExpandImage(!expandImage)} id='bigImageId' src={images[imageShowed]} alt="imageBig" />
 
                 <div className='productsImages-container_arrowLeft'>
                     <button type='button' onClick={changeImageMinus}><img src={arrowLeft} alt="arrowLeft" /></button>       
