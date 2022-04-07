@@ -130,8 +130,7 @@
     .navbar{
         width: auto;
         height: 100px;
-        margin-left: 20rem;
-        margin-right: 20rem;
+        
         
     }
     .navbar__links{
@@ -139,7 +138,7 @@
         display: flex;
         flex-direction: row;
         font-size: 20px;
-        margin-left: 3rem;
+        margin-left: 1%;
     }
 
     .navbar__links p,
@@ -169,6 +168,22 @@
     .navbar__product-cart{
         display: flex;
         align-items: center;
-        right: 20rem;
+        
     }
 }   
+
+@media (min-width: 1600px){
+    .navbar__product-cart{
+        
+        right: 20rem;
+    }
+    .navbar{
+        
+        margin-left: 20rem;
+        margin-right: 20rem;
+        
+    }
+    .navbar__links{
+        margin-left: 4rem;
+    }
+}

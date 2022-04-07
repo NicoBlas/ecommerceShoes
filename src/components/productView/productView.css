@@ -151,6 +151,7 @@
     .porductView__images-container{
         margin-right: 2rem;
         width: 28%;
+        min-width: 400px;
     }
 
     .porductView__images-container_bigImage{
@@ -159,7 +160,7 @@
     }
    
     .porductView__info-container{
-        width: 30%;
+        width: 40%;
         margin-left: 2rem;
     }
     .porductView__info-container h2{
@@ -183,7 +184,8 @@
     .productView__info-container-cart_number{
         width: 40%;
         height: 75px;
-        margin-right: 2rem;
+        margin-right: 1rem;
+        padding: 1rem;
     }
     .productView__info-container-cart_addToCart button{
         height: 70px;
@@ -214,5 +216,17 @@
     }
     .productViwe__expandImage-container{
         display: block;
+    }
+}
+
+@media (min-width: 1400px){
+    .porductView__info-container {   
+        width: 30%;
+    }
+
+    .productView__info-container-cart_number{
+
+        margin-right: 2rem;
+        
     }
 }
