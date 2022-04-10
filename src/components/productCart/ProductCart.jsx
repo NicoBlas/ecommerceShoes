@@ -5,9 +5,9 @@ import cart from "../../assets/icon-cart.svg"
 import deletee from "../../assets/icon-delete.svg"
 import image1 from "../../assets/image-product-1.jpg"
 
-const productsInCartActive = []
 
-const ProductCart = () => {
+
+const ProductCart = ({productsInCartActive,setProductsInCartActive}) => {
   const [toggleMenu, setToggleMenu] = useState(false)
   const {productsToAdd, setProductsToAdd} = useContext(ProductsContext)
   const [value,setValue] = useState(false)
@@ -15,18 +15,12 @@ const ProductCart = () => {
   const deleteProduct = () =>{
     return productsInCartActive.shift()
   }
-  const pushProduct = () =>{
-    return productsToAdd!=0?productsInCartActive.push(productsToAdd):null
   
-  }
 
   useEffect(()=>{
     deleteProduct()
   },[value])
 
-  useEffect(()=>{
-    pushProduct()
-  },[productsToAdd])
 
   return (
     <div className='productCart'>

@@ -10,13 +10,28 @@ function App() {
 
   const [productsToAdd, setProductsToAdd] = useState(0)
   const [expandImage, setExpandImage] = useState(false)
+  const [productsInCartActive, setProductsInCartActive] = useState([])
+
+
+  // const pushProduct = () =>{
+  //   return productsToAdd!=0?productsInCartActive.push(productsToAdd):null
+
+  // }
+
+  const pushProduct = () =>{
+    return productsToAdd!=0?setProductsInCartActive(oldArray => [...oldArray,productsToAdd ]):null
+  }
+
+
+  useEffect(()=>{
+    pushProduct()
+  },[productsToAdd])
 
   return (
-  
     <ProductsContext.Provider value={{productsToAdd, setProductsToAdd}}>
       <ExpandImageContext.Provider value={{expandImage, setExpandImage}}>
         <div className="App">
-          <Navbar />
+          <Navbar productsInCartActive={productsInCartActive}  setProductsInCartActive={setProductsInCartActive}  />
           <ProductView />
         </div>
       </ExpandImageContext.Provider>

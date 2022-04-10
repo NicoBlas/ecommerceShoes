@@ -18,14 +18,14 @@ const Menu = () =>{
   )
 }
 
-const Navbar = () => {
+const Navbar = ({productsInCartActive, setProductsInCartActive}) => {
 
   const [toggleMenu, setToggleMenu] = useState(false)
 
   return (
     <div className='navbar'>
       <div className='navbar__first-section'>
-        
+        {console.log(productsInCartActive)}
         <div className='navbar__menu'>
           {toggleMenu
             ? <RiCloseLine color='black' size={27} onClick={() => setToggleMenu(false)} />
@@ -51,7 +51,7 @@ const Navbar = () => {
       </div>
 
       <div className='navbar__product-cart'>
-        <ProductCart />
+        <ProductCart productsInCartActive={productsInCartActive}  setProductsInCartActive={setProductsInCartActive}  />
         <img id='navbar__product-cart-avatar' src={avatar} alt="loggin" />
       </div>
 
